@@ -1,0 +1,5 @@
+- dgvoodoo 2.81.3 32-bit
+- geo-11 0.6.182 32-bit
+- select dgvoodoo as driver in options - video
+- disable vertex/pixel shader that holds menu to enable separation
+- makes close objects disappear
