@@ -1,0 +1,54 @@
+Title,Version,Year,Bit,Graphics,VR,Stereo,Steam Deck,Stereo Nvidia,Comments
+Doom,,1993,,,,2020 rerelease (Steam) without separation,,,
+Descent,d2x-xl v1.18.74-ar8-nf1,1995,32,OpenGL,Rift only,"d2x-xl incl changes by Noric Forge; to enable sound: add music and sounds files, in /config/dx2.ini: -sdl_mixer 1, -hires_sound 2, -nocdrom, -midifix",see PC,,
+Hexen,,1995,,,,,,,
+Descent 2,d2x-xl v1.18.74-ar8-nf1,1996,32,OpenGL,Rift only,"d2x-xl incl changes by Noric Forge; to enable sound: add music and sounds files, in /config/dx2.ini: -sdl_mixer 1, -hires_sound 2, -nocdrom, -midifix",see PC,,
+Schleichfahrt/Archimedean Dynasty,,1996,32,"3dfx, D3D",x,"dgvoodoo glide2x + geo-11, disable HUD pixel shader where stereo.x>1 (discard before sampling texture) else no separation; disable vsync EVERYWHERE",,stereo disabled with 3dmigoto 1.3.16,3d breaking layer defect; vs: 19b145b9e5e4a299
+Star Wars Jedi Knig - Dark Forces 2,,1997,,,,"dgvoodoo + geo-11; s hardware accelaration, 1920*1080 resolution",,"3dmigoto 1.3.16: run with jkstart for advanced options; stereo disabled with jk.exe, failing with jkstart.exe",3d breaking layer defect; vs: da405a9e9ff17925
+Thief: Dark Project,,1998,32,,,"Install Tfix: https://www.ttlg.com/forums/showthread.php?t=134733, dgvoodoo2: res 3840*1080, windowed, stretched, app controlled state on, geo-11",ratio off,,
+Trespasser,,1998,32,"D3D9, Software",x,"trespass.exe, add ddraw.dll + D3Dlmm.dll, switch video to dgvoodoo, add geo-11, disable menu shader to enable separation but makes close objects disappear, (tpassp6 for d3d9 and fullhd, dgvoodoo 2.8.2: no separation)",,3dmigoto 1.3.16: similar as geo-11 when disabling menu shader on one side,3d breaking layer defect: vs: da405a9e9ff17925
+Descent 3,,1999,32,3dfx2,x,dgvoodoo glide2x + geo-11 32bit; upscale to 3840x1080 in dgvoodoo; upscaling in d3dxm.ini gets mouse stuck,,,
+Dungeon Keeper 2,1.7,1999,32,D3D,x,"dgvoodoo (must run in windowed mode, else fails) + geo-11 32, separastion=10 convergence=3, upscaling 1;",,nothing with 3dmigoto 1.3.16,"Same-side separation in start menu, works fine in-game; 3d breaking layer: "
+Freespace 2,,1999,32,D3D,x,"dgvoodoo2 + geo-11 32-bit, Conv=3, ingame resolution 3840*1080; ",,,
+Half-Life,,1999,32,D3D,via half lilfe vr,"dgvoodoo Ddraw.dll + D3Dlmm.dll, geo-11 32-bit; has to be in fullscreen in main menu (click/enter during videos, foxus on window) otherwise very small windows during game; has to run in non-windowed mode, otherwise no stereo/d3d; load level through console, resizing otherwise; feils if upscaling =1^; set resolution via dgvoodoo; requires geo-11 0.6.56, crashes before otherwise"," ""Your system reported only -0.00K of physical memory. Half-Life requires at least 16MB.""/use ps2 version + pcsx2 as alternative",?,
+Outcast 1.1,,1999,32,D3D9,x,"X: dgvoodoo2 works, geo-11 works (2screens), no 3d effect even with conv: 10k, sep: 10k -> voxel graphics?",x,x,
+Star Wars: Episode I - Racer,,1999,32,D3D9,x,"GOG/Steam version, add 32-bit dgvoodoo + geo-11; glasses in hdmi mode","steam version + dgvoodoo + geo-11, WINEDLLOVERRIDES=DDraw,D3DImm=n,b %command%",?,
+Deus Ex,,2000,32,D3D,x,dgvoodoo + geo-11,"goty steam version: WINEDLLOVERRIDES=D3Draw=n,b %command%",,
+Hitman: Codename 47,,2000,32,"3dfx, D3D, openGL",x,dg Glide3x.dll + geo-11; no stereo with D3D probably requires rerouting (RenderD3D.dll?),,,
+Starlancer,,2000,32,D3D,x,dgvoodoo2 +geo-11: separation in same directions=no 3d effect,,,
+Aquanox,,2001,32,D3D8,x,"dgvoodoo 32-bit d3d8, geo-11 32-bit, conv=3, sep=80","requires explicit loading of dlls: WINEDLLOVERRIDES=D3D8,d3d11, d3dcompiler_47,nvapi=n,b %command%; set upscaling to 3840*1080, ingame resolution to 1920*1080; fails in game mode with ""num of display modes overflow""; fix via dgvoodo settings: ""DefaultEnumeratedResolutions        = none
+ExtraEnumeratedResolutions          = 1280x800,1920x1080,3840x1080""; glasses fail when battery low (?)",,
+Blade of Darkness,"GOG, 1.0.1",2001,32,"OpenGL, 3dfx voodoo, D3D",x,x,x,x,only opngl working
+Gothic,,2001,32,D3D11,x,"Patch according to https://www.worldofgothic.de/dl/download_591.html ( Gothic Steam + Pathc 1.08k as Admin + Playerkit 1.08k as Admin + Systempack + GD3D11 renderer),  GD3D11_PreviewReleaseG1.zip , add geo-11 32-bit, turn upscaling off, switch glasses to default mode and turn to stereo 3d when game has loaded; no UI elements with  shader fixes 6f, 8f, 37, c7; no menu if stereo enalbed due to separationconv=50, sep=100",,,
+Halo: Combat Evolved,,2001,32,D3D9,x,"dgvoodoo2 D3D9 + geo-11 32-bit, conv: 1, sep: 30; upscaling=3840*1080","see PC, cd key issue",,
+Operation: Flashpoint GOTY,,2001,32,"3DFX, D3D",x,"dgvoodoo2: default settings, D3D8.dll/ Geo-11: 32-bit, upscale=1, w=3840, h=1080, conv:1, sep: 20","crash, ""Bad serial number given in Setup""","dgvoodoo2 + 3dmigoto, d3dx.ini: stereotexture: 0x70EDB381 = 0x00000001, Enable lasersight 0x7058B6E1 = 0x00000001, Dynamic lasersight: 0x7014fca2 = 0x3f800000",
+Legacy of Kain: Soul Reaver 2,,2001,,D3D8,,,PCSX2/Geo-11,,
+Gothic II,,2002,33,D3D11,,compare Gothic,,,
+Morrowind,,2002,32,D3D8,OpenMW VR,"dgvoodoo2 D3D8 + geo-11 32-bit, conv: 30, sep: 80; upscaling=3840*1080",see PC,,
+Mafia,,2002,,D3D8,,,,,No separation
+Aquanox 2,,2003,32,D3D9,x,"dgvoodoo 32-bit d3d9, geo-11 32-bit, conv=3, sep=80","WINEDLLOVERRIDES=D3D9,d3d11, d3dcompiler_47,nvapi=n,b %command%;upscaling to 3840*1080, ingame resolution to 1920*1080; desktop mode only ;",,
+Legacy of Kain: Defiance,,2003,,D3d9,,3d switching when interacting,PCSX2/Geo-11,,
+Fable: Lost Chapters,,2004,,D3D9,,,,,breaks when applying dege's D3D9
+"Half-Life Source, 2,2 Episode 1,2 Episode 2",,2004,32,D3D9,via half lilfe vr,"dgvoodoo placed in /bin, geo-11 placed in root folder; upscale=1 to 3840*1080","currently dgvoodoo not working, set compatibility mode to prootn to use windows version (?); current workaround with ""Half-Life quadrilogy"" rip, runs wine.exe, select bat file; update lumaEmu.inis with "" -dxlevel 70 -width 1920 -height 1080"" to prevent crashing and set correct resolution",,
+Oblivion,,2006,,D3D8,,"dgvoodoo + geo-11, no separation; ",,dgvoodoo + 3dmigoto 1.3.16: separation,uses xd3dcompiler_46
+Dead Space,"GOG, 1.0.0.22",2008,32,D3D9,x,dgvoodoo d3d9 + geo-11 32,,,"light shadowing, flickering fmvs"
+Deus Ex: Human Revolution,,2011,32,D3D11,x,"geo-11 32-bit, Conv=60+, ingame resolution 3840*1080",,,
+Skyrim Special Edition,,2011,64,D3D11,Skyrim VR,"geo-11 64-bit, ratio off",ratio off,,
+Alien: Isolation,,2014,32,D3D11,MotherVR,"geo-11 32-bit, upscaling to 3840*1080, ingame 1920*1080","proton experimental, switch to windoed fullscreen before activating 3d",,
+Oddworld: Stranger's Wrath HD,,2014,32,OpenGL,x,,,,
+Fable Anniversary,,2014,32,D3D9,x,,,,no separation
+Black Mesa,,2015,32,D3D9,via half life 2 vr and black mesa source vr,black screen with dgvoodoo,?,?,
+Oddworld: New 'n' Tasty,,2015,32,D3D9,x,dgvoodoo + geo-11; ,dgvoodoo + geo-11; ,,requires fix; universal fix not working (unity 4); see darkstarsword fix for unity: https://github.com/DarkStarSword/3d-fixes/tree/master/Unity
+Crash Bandicoot Nsane Trilogy,,2017,64,D3D9,x,dgvoodoo 64 + geo-11 64: shadows missaligned,,,
+Project 64/Jabo d3d,3.0.1,2018,32,"D3D8, GL",DolphinVR,"dgvoodoo + geo-11 + D3D8 plugin: split screen, no separation with Jabo d3d8 1.7.0; error with 1.6.1",,,
+Keep talking and nobody explodes,Windows Steam 1.9.24,2019,64,D3D11,native,"geo-11 64, separation=30 convergence=3, upscaling works when in windowed mode",see PC,,
+Death Stranding,,2019,,D3D12,x,x,x,x,
+Manifold garden,,2019,64,D3D11,,geo-11 64-bit,"Add geo-11 64-bit, Bad performance
+",,
+Half-Life: Alyx,,2020,64,D3D11,native,"add NoVR mod, geo-11 64-bit, Upscaling=1, 3840*1080",see PC,,
+Crash Bandicoot 4,,2020,,D3D12?,,,,,
+System Shock - Remake,,2023,64,D3D11,UEVR,Geo-11 64-bit; place files in System Shock - Remake\SystemShock\Binaries\Win64,,,
+PCSX2,1.7.5214,2023,32,D3D11,,geo-11,"pcsx2-qt.exe fails; use version < 1.7.2484 (32-bit, AVX2); add dxvk through protontricks; ",,"use Helixmod (<0.6.90, direct_mode = nvidia_dx11)"
+PPSSPP,1.16.6,2023,64,D3D9,PPSSPP VR,"64bit: dg 2.81.3 + geo-11 0.6.182, sbs; breaks when ingame; use helixfix (allow_create_device=0)",,,
+Tomb Raider I-III Remastered,,2024,,OpenGL,x,x,x,,
+Outcast: A new Beginning,,2024,64,D3D11,,geo-11 64-bit,,,requires fix
