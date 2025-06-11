@@ -146,7 +146,6 @@ lt r0.z, l(100.000000), r1.z
 or r0.y, r0.z, r0.y
 and r0.x, r0.x, r0.y
 and r0.x, r0.x, l(1)
-discard_nz r0.x
 mul o0.xyzw, r1.xyzw, l(0.00392156886, 0.00392156886, 0.00392156886, 0.00392156886)
 ret
 // Approximately 100 instruction slots used

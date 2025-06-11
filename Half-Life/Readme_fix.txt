@@ -1,0 +1,7 @@
+- for Half-Life versions 1.1.0.8 and 1.1.1.0
+- requires Geo-11 0.6.56, game fails with 0.6.164 and higher
+- set video mode to Direct3D
+- apply fix
+- change resolutions via dgvoodoo, no upscaling (game fails with upscaling)
+- shader disables mouse overlay
+- optionally disable intro videos with -novid command
